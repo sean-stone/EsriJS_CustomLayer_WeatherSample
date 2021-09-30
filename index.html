@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>JSAPI custom layer view with Anime.js</title>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.20/esri/themes/light/main.css" />
+  <link rel="stylesheet" href="./style.css" />
+
+  <script src="https://js.arcgis.com/4.20/"></script>
+  <script src="./script.js"></script>
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+  <div id="timeSlider"></div>
+
+  <div id="infoDiv" class="esri-widget">
+
+    <p>globalCompositeOperation:</p>
+    <select id="source">
+      <option value="false">None</option>
+      <option value="source-over">source-over</option>
+      <option value="source-in">source-in</option>
+      <option value="source-out">source-out</option>
+      <option value="source-atop">source-atop</option>
+      <option value="destination-over">destination-over</option>
+      <option value="destination-in">destination-in</option>
+      <option value="destination-out">destination-out</option>
+      <option value="destination-atop">destination-out</option>
+      <option value="lighter">lighter</option>
+      <option value="copy">copy</option>
+      <option value="xor">xor</option>
+      <option value="multiply">multiply</option>
+      <option value="screen">screen</option>
+      <option value="overlay">overlay</option>
+      <option value="darken">darken</option>
+      <option value="lighten">lighten</option>
+      <option value="color-dodge">color-dodge</option>
+      <option value="color-burn">color-burn</option>
+      <option value="hard-light">hard-light</option>
+      <option value="soft-light">soft-light</option>
+      <option value="difference">difference</option>
+      <option value="exclusion">exclusion</option>
+      <option value="hue">hue</option>
+      <option value="saturation">saturation</option>
+      <option value="color">color</option>
+      <option value="luminosity">luminosity</option>
+    </select>
+
+    <p>Transparency:</p>
+    <input type="range" min="0" max="1" value="0.5" step="0.05" class="slider" id="transparency">
+
+    <p>Size:</p>
+    <input type="range" min="0" max="5" value="1.6" step="0.1" class="slider" id="blendsize">
+
+  </div>
+
+  <div id="sliderContainer">
+    <div id="sliderDiv"></div>
+  </div>
+
+  <div style="display:none;">
+    <img id="hot" alt="red icon" src="./images/red.png" width="1080" height="1080">
+    <img id="cold" alt="blue icon" src="./images/blue.png" width="1080" height="1080">
+    <img id="mild" alt="yellow icon" src="./images/yellow.png" width="1080" height="1080">
+  </div>
+</body>
+
+</html>
